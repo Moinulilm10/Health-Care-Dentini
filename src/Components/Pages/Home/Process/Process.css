@@ -1,0 +1,19 @@
+.fas {
+  font-size: 35px;
+}
+
+.process {
+  display: flex;
+  border: 2px solid rgb(148, 148, 247);
+  padding: 10px;
+  margin: 44px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  background-color: rgb(80, 80, 248);
+}
+
+@media only screen and (max-width: 688px) {
+  .process {
+    flex-direction: column;
+  }
+}

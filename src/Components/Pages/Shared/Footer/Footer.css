@@ -1,0 +1,18 @@
+.footer {
+  background-color: rgb(227, 245, 240);
+}
+
+.fab {
+  font-size: 33px;
+  padding: 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+@media only screen and (max-width: 688px) {
+  .footer {
+    flex-direction: column;
+  }
+}

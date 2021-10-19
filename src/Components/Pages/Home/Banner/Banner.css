@@ -1,0 +1,32 @@
+.banner {
+  background-color: rgb(227, 245, 240);
+  box-shadow: rgb(227, 245, 240);
+}
+.title {
+  color: rgb(17, 17, 233);
+  font-weight: bolder;
+  font-size: 59px;
+  margin-top: 142px;
+}
+.paragraph {
+  margin: 160px;
+  /* font-family: -webkit-body; */
+  font-weight: 100;
+  font-size: 20px;
+  color: gray;
+}
+
+.about-btn {
+  background-color: lightblue;
+  outline: none;
+  border: none;
+  padding: 17px 34px;
+  color: black;
+}
+.about-btn:hover {
+  background-color: #0dcaf0;
+  color: whitesmoke;
+}
+.banner-pic img {
+  height: 480px;
+}

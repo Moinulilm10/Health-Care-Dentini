@@ -1,0 +1,15 @@
+.contact-form {
+  margin: 50px;
+}
+
+.second-part {
+  display: flex;
+  flex-direction: column;
+}
+
+.body {
+  font-family: Montserrat;
+}
+.second-part p {
+  color: gray;
+}

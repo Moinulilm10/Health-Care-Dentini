@@ -1,0 +1,51 @@
+body {
+  background-color: rgb(217, 217, 255);
+}
+
+.about-us-heading {
+  margin-right: 1000px;
+  margin-top: 90px;
+}
+
+.about-us-heading h1 {
+  font-size: 70px;
+  font-weight: bold;
+}
+.about-us-heading p {
+  font-size: 21px;
+  margin-left: 91px;
+  font-weight: 600;
+  color: gray;
+}
+
+.about-us-second {
+  display: flex;
+  justify-content: center;
+  margin-top: 140px;
+}
+
+.about-img-one {
+  margin-left: 98px;
+}
+
+.caring-for-health h1 {
+  margin-right: 434px;
+  margin-top: 39px;
+  font-weight: bolder;
+}
+
+.caring-for-health p {
+  margin-right: 257px;
+  padding-left: 53px;
+  color: gray;
+}
+
+.caring-for-health h4 {
+  margin-right: 288px;
+}
+
+@media only screen and (max-width: 688px) {
+  .about-us-second {
+    flex-direction: column;
+  }
+}

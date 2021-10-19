@@ -1,3 +1,13 @@
+- This simple dental health care website build with react and firebase authentication.
+- This contain 5 main route.
+- Two Route are Private Route. They are Showdetails and Contact us components.
+- User only can protected if he or she has account in this website.
+- Context Api also used in this project.
+- Also have two types firebase authentication , google sign in and email password verification.
+- This project toggle between login and register also implemented.
+
+- Netlify live site link : https://dentini-health-care.netlify.app/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
