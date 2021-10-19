@@ -8,6 +8,8 @@
 
 - Netlify live site link : https://dentini-health-care.netlify.app/
 
+* github private reop link : https://github.com/Programming-Hero-Web-Course3/healthcare-related-website-Moinulilm10
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
