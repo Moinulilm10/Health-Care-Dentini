@@ -1,15 +1,31 @@
 import React, { useState } from 'react';
 import loginPic from '../../../../../images/login.jpg'
 import { Form, Button, Row, Col } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../../../Hooks/useAuth';
 
 
 const Register = () => {
 
-    const { handleRegButton, handleEmailChange, handlePasswordChange, toggleLogin, handleResetPassword, isLogin } = useAuth()
+    const { handleRegButton, handleEmailChange, handlePasswordChange, toggleLogin, isLogin, processLogin, handleNameChange } = useAuth()
 
     const [error, setError] = useState('')
+
+
+
+
+
+    const location = useLocation()
+    const history = useHistory()
+    const redirect_url = location.state?.from || '/'
+    console.log('came form', location.state?.from)
+
+    const handleEmailLogin = () => {
+        processLogin()
+            .then(result => {
+                history.push(redirect_url)
+            })
+    }
 
 
 
@@ -53,6 +69,18 @@ const Register = () => {
 
                                 <Form onSubmit={handleRegButton}>
                                     <h3 className="text-primary text-center mt-3 mb-5">{isLogin ? 'Login' : 'Register'}</h3>
+
+
+
+                                    {!isLogin && <div className="row mb-3">
+                                        <label htmlFor="inputName" className="col-sm-2 col-form-label">Name</label>
+                                        <div className="col-sm-10">
+                                            <input type="text" onBlur={handleNameChange} className="form-control" id="inputName" placeholder="Your Name" />
+                                        </div>
+                                    </div>}
+
+
+
                                     <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
                                         <Form.Label column sm={2}>
                                             Email
@@ -79,19 +107,13 @@ const Register = () => {
                                     <div className="row mb-3 text-danger">{error}</div>
                                     <Form.Group as={Row} className="mb-3">
                                         <Col sm={{ span: 10, offset: 2 }}>
-                                            <Button type="submit">{isLogin ? 'Login' : 'Register'}
-                                            </Button>
-                                            <br />
-                                            <br />
-                                            <Button className="mr-2" onClick={handleResetPassword} variant="success" size="md">
-                                                Reset password
+                                            <Button onClick={handleEmailLogin} type="submit">{isLogin ? 'Login' : 'Register'}
                                             </Button>
                                         </Col>
                                     </Form.Group>
                                 </Form>
-
                             </div>
-                            <div className="mt-3">
+                            <div className="mt-3 text-center">
                                 <p>Already have an account? <Link to="/login">Login</Link></p>
                             </div>
                         </div>

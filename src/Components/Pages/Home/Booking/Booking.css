@@ -1,0 +1,7 @@
+@media only screen and (max-width: 688px) {
+  .booking-container {
+    flex-direction: column;
+    overflow: hidden;
+    margin: 15px;
+  }
+}

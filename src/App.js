@@ -12,6 +12,8 @@ import AuthProvider from './Components/Context/AuthProvider';
 import PrivateRoute from './Components/Pages/Home/Login/PriveteRoute/PrivateRoute';
 import Services from './Components/Pages/Home/Services/Services';
 import Register from './Components/Pages/Home/Login/Register/Register';
+import Booking from './Components/Pages/Home/Booking/Booking';
+import Successfully from './Components/Pages/Home/Successfully/Successfully';
 
 function App() {
   return (
@@ -31,6 +33,12 @@ function App() {
             </Route>
             <PrivateRoute path="/showdetails/:serviceId">
               <ShowDetails></ShowDetails>
+            </PrivateRoute>
+            <PrivateRoute path="/appointment">
+              <Booking></Booking>
+            </PrivateRoute>
+            <PrivateRoute path="/successfully">
+              <Successfully></Successfully>
             </PrivateRoute>
             <Route path="/aboutus">
               <AboutUs></AboutUs>

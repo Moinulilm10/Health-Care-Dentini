@@ -4,6 +4,7 @@
 
 .process {
   display: flex;
+  justify-content: space-evenly;
   border: 2px solid rgb(148, 148, 247);
   padding: 10px;
   margin: 44px;

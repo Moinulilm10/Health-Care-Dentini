@@ -10,7 +10,7 @@ const Header = () => {
     const { user, logOut } = useAuth()
     return (
         <>
-            <Navbar className="navbar" bg="light" variant="dark" collapseOnSelect expand="lg">
+            <Navbar className="navbar" bg="light" variant="light" collapseOnSelect expand="lg">
                 <Container>
                     <Navbar.Brand as={HashLink} to="/home"><img src={headerLogo} alt="" /></Navbar.Brand>
                     <Navbar.Toggle />
@@ -29,7 +29,7 @@ const Header = () => {
                         }
 
                         <Navbar.Text className="text-dark display-name">
-                            signed in as : <a className="text-dark" href="#login">{user?.displayName}</a>
+                            <a className="text-dark mx-2" href="#login"> {user?.displayName}</a>
                         </Navbar.Text>
                     </Navbar.Collapse>
                 </Container>
